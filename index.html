@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hijack</title>
+    <link rel="stylesheet" href="frontend//bootstrap.html">
 </head>
 <body>
-    <nav>
-        <ul type="none">
+    <nav align="center">
+        <!-- <ul type="none">
             <li>Home</li>
             <li>About</li>
-            
             <li>Contact Us</li>
-        </ul>
+        </ul> -->
+        Home
+        About
+        Contact us
+        <hr>
     </nav>
     <form action="" method=" " align="center">
         <label for=""><b>Enter your Name:</b> </label>
@@ -28,6 +32,7 @@
             <option value="Hindi">Hindi</option>
         </select><br>
         <input type="submit">
+        <hr>
     </form>
     <h1>Hijacking TOP TIER COMPANIES</h1>
     <hr>
@@ -46,10 +51,10 @@
     </form>
     <hr>
     <form action="" method="get" accept-charset="utf-8">
-        <input type="text"  id="username" placeholder="username" value="" />
         <label for="username" >Username</label>
+        <input type="text"  id="username" placeholder="username" value="" />
+        <label for="password">Password</label>
         <input type="password"  id="password" placeholder="password" value="" />
-        <label for="password">password</label>
         <button>Register</button>
     </form>
     <hr>
@@ -57,11 +62,40 @@
     <h1>Race Registration!</h1>
     <form action="">
         <div>
-            <label for="">First Name: </label>
-            <input type="text" required>
-            <label for="">Last Name: </label>
-            <input type="text" required>
+            <label for="firstname">First Name: </label>
+            <input type="text" id="firstname" required>
+            <label for="lastname">Last Name: </label>
+            <input type="text" id="lastname" required>
         </div>
+        <div>
+            <h2>Select a Race: </h2>
+            <br>    
+            <label for="funrun">Fun Run 5K</label>
+            <input type="radio" id="funrun">
+            <br>
+            <label for="halfmarathon">Half Marathon</label>
+            <input type="radio" id="halfmarathon">
+            <br>
+            <label for="fullmarathon">Full Marathon</label>
+            <input type="radio" id="fullmarathon">
+            <br>
+        </div>
+        <div>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" requried>
+            <label for="password1">Password: </label>
+            <input type="password" id="password1" requried>
+        </div>
+        <div>
+                <span>Select age group</span>
+                <select name="Age" id="Age">
+                    <option value="Under 18"> Under 18</option>
+                    <option value="18-50">18-50</option>
+                    <option value="50+">50+</option>
+                </select>
+        </div>
+        <button>Register</button>
     </form>
 </body>
 </html>
