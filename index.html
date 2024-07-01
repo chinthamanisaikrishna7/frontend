@@ -63,33 +63,49 @@
     <form action="">
         <div>
             <label for="firstname">First Name: </label>
-            <input type="text" id="firstname" required>
+            <input type="text" id="firstname" name="firstname" required>
             <label for="lastname">Last Name: </label>
-            <input type="text" id="lastname" required>
+            <input type="text" id="lastname" name="lastname" required>
         </div>
         <div>
             <h2>Select a Race: </h2>
             <br>    
-            <input type="radio" id="funrun" name="race">
+            <input type="radio" id="funrun" name="race" value="funrun">
             <label for="funrun">Fun Run 5K</label>
             <br>
-            <input type="radio" id="halfmarathon" name="race">
+            <input type="radio" id="halfmarathon" name="race" value="halfmarathon">
             <label for="halfmarathon">Half Marathon</label>
             <br>
-            <input type="radio" id="fullmarathon" name="race">
+            <input type="radio" id="fullmarathon" name="race" value="fullmarathon">
             <label for="fullmarathon">Full Marathon</label>
+            <!-- version 1.0.0.0 -->
             <!-- for the radio buttons to get clicked only one at a time we have to keep same name for all the buttons  -->
+            <!-- version 1.0.0.1 -->
+             <!-- before radio button witout value when we submit:
+             http://127.0.0.1:5500/frontend/index.html?race=on&Age=18-50 -->
+             <!-- here race=on when we select halfmarathon and even if we select fullmarathon the link will still be race=on so in this version this problem is addressed by adding value attribute to the radio input which sends the value type and on  -->
+             <!-- after adding value attribute to the radio button
+              http://127.0.0.1:5500/frontend/index.html?firstname=Mahesh&lastname=TummalaShetty&race=on&email=mahes%40gmail.com&pass=&Age=Under+18
+              http://127.0.0.1:5500/frontend/index.html?firstname=Mahesh&lastname=TummalaShetty&email=mahes%40gmail.com&pass=&Age=Under+18
+              http://127.0.0.1:5500/frontend/index.html?firstname=Mahesh&lastname=TummalaShetty&race=on&email=mahes%40gmail.com&pass=&Age=Under+18
+              http://127.0.0.1:5500/frontend/index.html?firstname=Mahesh&lastname=TummalaShetty&race=on&email=mahes%40gmail.com&pass=&Age=Under+18
+              http://127.0.0.1:5500/frontend/index.html?firstname=Mahesh&lastname=TummalaShetty&race=fullmarathon&email=mahes%40gmail.com&pass=&Age=Under+18
+               -->
+            <!-- the above comments shows updation of sending datat through url in each version or in each stage of development -->
             <br>
         </div>
         <div>
             <br>
             <label for="email">Email:</label>
-            <input type="email" id="email" requried>
+            <input type="email" id="email" name="email" requried>
             <label for="password1">Password: </label>
-            <input type="password" id="password1" requried>
+            <input type="password" id="password1" name="pass" requried>
         </div>
         <div>
-                <span>Select age group</span>
+            <!-- version 1.0.0.2 -->
+             <!-- updated the drop dow menu we had used span as an element insted of label for the Select age group part now we are using label for code readability -->
+                <!-- <span>Select age group</span> -->
+                <label for="Age">Select age group</label>
                 <select name="Age" id="Age">
                     <option value="Under 18"> Under 18</option>
                     <option value="18-50">18-50</option>
